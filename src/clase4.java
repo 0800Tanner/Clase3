@@ -10,16 +10,17 @@ public class clase4   {
         int numeroMenor = Integer.MAX_VALUE;
 
         do {
-            total += numUsuario;
             System.out.print("Para parar el programa escriba 0, si no ingrese otro numero: ");
-            if(numUsuario > numeroMayor && numUsuario!=0){
-                numeroMayor = numUsuario;
-
-            }
-            if (numUsuario < numeroMenor && numUsuario!=0){
-                numeroMenor = numUsuario;
-            }
             numUsuario=teclado.nextInt();
+            if (numUsuario == 0)
+                break;
+            if (numUsuario==3)
+                continue;
+            total += numUsuario;
+            if(numUsuario > numeroMayor)
+                numeroMayor = numUsuario;
+            if (numUsuario < numeroMenor)
+                numeroMenor = numUsuario;
         } while (numUsuario!= 0);
         System.out.println("La suma total es: " + total) ;
         System.out.println("El numero mayor es: " + numeroMayor);
